@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TO-DO list</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="main-page">
+		<div class="weekdays" id="weekdays"></div>
+		<div class="agenda-grid" id="agenda-grid"></div>
+
+		<div class="create-task-wrp-fixed" id='create-task-modal'>
+			<div class="create-task-wrp-prnt">
+				<div class="create-task-wrp" id="create-task-wrp">
+					<div class="create-task">
+						<div class="task-header">
+							<div class="task">Task</div>
+							<div class="close-btn">✖</div>
+						</div>
+						<input type="text" id="task-title" class="task-title">
+						<div class="when">When</div>
+						<div class="date" id="date"></div>
+						<div class="note">Note</div>
+						<input type="text" class="task-note" id="task-note">
+						<button id="btn-create" class="btn-create" >Create</button>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="edit-task-wrp-fixed" id="edit-task-modal">
+			<div class="edit-task-wrp-prnt">
+				<div class="edit-task-wrp">
+					<div class="edit-task">
+					    <div class="when">Title</div>
+						<input class="edit-task-title" id="edit-task-title"/>
+						<div class="edit-task-date date" id="edit-task-date"></div>
+						<div class="edit-task-dscrpt-wrp">
+							<textarea rows="3" id="edit-task-dscrpt" class="edit-task-dscrpt"></textarea>
+						</div>
+						<button class="close-save" id="close-save">Update and close</button>
+						<button id="delete" class="delete">Delete</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="helpers.js"></script>
+	<script type="text/javascript" src="mainLogic.js"></script>
+</body>
+</html>

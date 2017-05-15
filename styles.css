@@ -1,0 +1,137 @@
+body{
+	margin:0;
+}
+.main-page{
+	padding: 20px;
+	text-align: center;
+}
+.weekdays{
+	border: 1px solid;
+	text-align: left;
+}
+.weekdays .weekday{
+	display: inline-block;
+	margin-left: -1px;
+	width: 14.29%;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+.weekdays .weekday:first-child{
+	margin-left: 0;
+}
+.agenda-grid{
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+}
+.grid-item{
+	width: 14.29%;
+	height: 100px;
+	background: #cfc;
+	border: 1px solid;
+	border-top: none;
+	text-align: left;
+	padding:10px;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0 0 -4px -1px;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+.grid-item::before{
+	content: attr(data-task-title);
+	position: absolute;
+	left: 100%;
+	top: 40%;
+	transition: left .5s;
+	text-transform: uppercase;
+}
+.grid-item:hover::before{
+	left: 20%;
+}
+.current-date{
+	background: #daa;
+}
+.create-task-wrp-fixed, .edit-task-wrp-fixed{
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.create-task-wrp-prnt, .edit-task-wrp-prnt{
+	display: table;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+}
+.create-task-wrp, .edit-task-wrp{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+.create-task, .edit-task{
+	display: inline-block;
+	width: 500px;
+	background: #fff;
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0 0 20px;
+}
+.create-task input, .edit-task input{
+	width:100%;
+}
+.create-task .btn-create{
+	padding: 5px 15px;
+	background: #55f;
+	float: right;
+	margin-top: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	font-weight: 500;
+}
+.edit-task-dscrpt-wrp{
+    width: 500px;
+}
+.edit-task-dscrpt{
+	min-width: 100%;
+	max-width: 100%;
+	max-height: 100px;
+}
+ .when, .note{
+	color: #888;
+}
+ .date, .when, .note{
+	text-align: left;
+	margin: 5px 0;
+}
+.create-task .task-title{
+	margin: 15px 0 20px;
+}
+.task-header .task{
+	float: left;
+	display: inline-block;
+}
+.task-header .close-btn{
+	float: right;
+	display: inline-block;
+}
+.edit-task .close-save, .edit-task .delete{
+	float: left;
+	margin-top: 20px;
+	padding: 5px 15px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.edit-task .delete{
+	background: transparent;
+	color: #55f;
+	font-weight: 900;
+	margin-left: 20px;
+	line-height: 1;
+}
